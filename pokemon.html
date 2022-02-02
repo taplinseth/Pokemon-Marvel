@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="pokemon.js"></script>
+    <link href="pokemon.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="get100Pokemon()">Get 100 Pokemon</button>
+    <button onclick="show100Pokemon()">Show 100 Pokemon</button>
+    <input id="save-input" placeholder="enter pokemon name" oninput="saveInput(this.value)">
+    <button onclick="getUserPokemon()">Get User Data</button>
+    <button id="showUser" onclick="showUserPokemon()">Show Pokemon Card</button>
+
+    <div id="show-100-pokemon">
+
+    </div>
+
+    <div id="user-pokemon-card">
+        <div id="pokemon-img"></div>
+        <h1 id="name"></h1>
+        <div id="bottom-left-container">
+            <div id="abilities"></div>
+            <div id="type"></div>
+        </div>
+        <div id="bottom-right-container">
+            <div id="hp"></div>
+            <div id="attack"></div>
+            <div id="defense"></div>
+            <div id="special-attack"></div>
+            <div id="special-defense"></div>
+            <div id="speed"></div>
+        </div>
+
+    </div>
+</body>
+</html>

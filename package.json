@@ -2,7 +2,7 @@
   "name": "pokemoncollection",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "pokemon.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/taplinseth/PokemonCollection#readme",
   "dependencies": {
-    "dotenv": "^15.0.0"
+    "dotenv": "^15.0.0",
+    "pokedex-promise-v2": "^4.0.0"
   }
 }

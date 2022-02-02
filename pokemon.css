@@ -1,0 +1,96 @@
+body {
+    background-color: #828b7b;
+}
+#user-pokemon-card {
+    display: none;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+            "top-left top-right"
+            "bottom-left bottom-right";
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 375px;
+    border: 10px yellow solid;
+    background-color: #fad604;
+    border-radius: 10px;
+}
+
+#pokemon-img {
+    grid-area: top-left;
+
+}
+
+#pokemon-img img {
+    margin-top: 31px;
+    width: 187px;
+}
+
+
+#name {
+    margin-top: 55%;
+    grid-area: top-right;
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+
+#bottom-left-container {
+    background-color: #e5d54e;
+    grid-area: bottom-left;
+    border-top: 1px black solid;
+    border-bottom-left-radius: 10px;
+
+}
+
+#bottom-right-container {
+    background-color: #ffdc00;
+    grid-area: bottom-right;
+    border-top: 1px black solid;
+    border-bottom-right-radius: 10px;
+    border-left: 1px black solid;
+
+}
+
+#abilities {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#type {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#hp {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#attack {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#defense {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#special-attack {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#special-defense {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#speed {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+
