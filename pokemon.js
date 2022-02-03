@@ -1,3 +1,5 @@
+
+
 let input = "";
 let pokemonArrayOf100 =[];
 let userPokemon = [];
@@ -23,8 +25,8 @@ const show100Pokemon = () => {
 }
 
 
-const getUserPokemon = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${input}`)
+const getUserPokemon = (fetch) => {
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${input}`)
         .then(response => response.json())
         .then(data => userPokemon.push(data));
 
@@ -66,4 +68,37 @@ const showUserPokemon = () => {
     speed.innerHTML = 'Speed: ' + userPokemon[0].stats[5].base_stat
 
 }
+const assert = require('assert');
+describe('getUserPokemon', () => {
+    it('gets user specified pokemon', () => {
+        const fakeFetch = url => {
+            assert(
+                url ===
+                `https://pokeapi.co/api/v2/pokemon/${input}`
+            )
+            return new Promise(function(resolve) {
 
+            })
+        }
+        getUserPokemon(fakeFetch, input)
+    })
+
+    it('parses data correctly', () => {
+        const fakeFetch = url => {
+            return Promise.resolve({
+                json: () => Promise.resolve({
+                    results: [
+                        {
+                            name: 'bulbasaur'
+                        }
+                    ]
+                })
+            })
+        }
+        getUserPokemon(fakeFetch, input)
+            .then(result => {
+                assert(result.name === 'bulbasaur')
+                done();
+            })
+    })
+})
