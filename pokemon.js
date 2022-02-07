@@ -102,3 +102,48 @@ describe('getUserPokemon', () => {
             })
     })
 })
+
+
+
+// take in target numnber
+// start guess at 0
+// multiply guess times iteself
+// if not === to target numnber
+// increment guess by 1
+// continue until target number is reached
+// print correct guess
+
+
+// target number = 81
+// squareroot = 9
+let guess = 0;
+
+const findSquareRoot = (targetNum) => {
+    guess++;
+
+    if(guess * guess === targetNum) {
+        console.log(guess);
+    } else {
+        return findSquareRoot(targetNum);
+    }
+
+}
+
+findSquareRoot(81);
+
+
+
+
+//sum array
+let array = [2,4,6,8,10] // output = 30
+let length = array.length;
+
+const sumArray = (array, length) => {
+    if(length <= 0){
+        return 0;
+    }
+    return (sumArray(array, length - 1) + array[length - 1]);
+
+}
+
+console.log(sumArray(array, length));
